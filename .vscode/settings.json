@@ -47,5 +47,8 @@
     "python.envFile": "${workspaceFolder}/.env",
 
     // PEP8 naming conventions
-    "python.analysis.usePEP8": true
+    "python.analysis.usePEP8": true,
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/src"
+    ]
 }
