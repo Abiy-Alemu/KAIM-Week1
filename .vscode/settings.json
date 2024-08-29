@@ -1,0 +1,51 @@
+{
+    // Python interpreter path
+    "python.pythonPath": "${workspaceFolder}/venv/bin/python",
+
+    // Linting settings
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.linting.pylintArgs": [
+        "--load-plugins=pylint_django"
+    ],
+
+    // Formatting settings
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": ["--line-length", "88"],
+
+    // Auto-import settings
+    "python.autoComplete.extraPaths": ["${workspaceFolder}/src"],
+
+    // Unit test configuration
+    "python.testing.unittestEnabled": true,
+    "python.testing.pytestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "${workspaceFolder}/tests",
+        "-p",
+        "*_test.py"
+    ],
+
+    // Code runner settings (if you use the Code Runner extension)
+    "code-runner.executorMap": {
+        "python": "python -u"
+    },
+
+    // Exclude folders from search
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.git": true,
+        "**/.vscode": true
+    },
+
+    // Python environment settings
+    "python.envFile": "${workspaceFolder}/.env",
+
+    // PEP8 naming conventions
+    "python.analysis.usePEP8": true
+}
